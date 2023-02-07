@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Clarissa's Portfolio</title>
+		<title>Whitted Ray Tracing</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,8 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
 						<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
@@ -37,17 +38,17 @@
 					</nav>
 
 				<!-- Banner -->
-					<section id="banner" class="major">
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
 						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
 							<header class="major">
-								<h1>Hi, my name is Clarissa</h1>
+								<h1>Whitted Ray Tracing</h1>
 							</header>
 							<div class="content">
-								<p>Thank you for taking a look at my Computer Graphics projects<br />
-								</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
-								</ul>
+								<p>Lighting Computation and Ray tracing<br /></p>
 							</div>
 						</div>
 					</section>
@@ -56,43 +57,29 @@
 					<div id="main">
 
 						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
+							<section id="one">
+								<div class="inner">
 									<header class="major">
-										<h3><a href="short_animation.html" class="link">Short Animation</a></h3>
-										<p>Work in Progress</p>
+										<h2>About</h2>
 									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="whitted_ray.html" class="link">Whitted Ray Tracing</a></h3>
-										<p>Lighting computation and ray tracing</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="texture.html" class="link">Texture Mapping</a></h3>
-										<p>Using texture mapping to create reflections</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="opengl_anim.html" class="link">OpenGL Animation</a></h3>
-										<p>Using OpenGL to create a simple animated globe</p>
-									</header>
-								</article>
+									<p>In this project the following points were implemented with OpenGL:</p>
+									<ul>
+										<li>Computation of ray intersection</li>
+										<li>Generation of shadows</li>
+										<li>Spawning of secondary rays</li>
+										<li>Recursive tracing of rays</li>
+										<li>Whitted Ray Tracing Algorithm</li>	
+									</ul>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/whitted/whitted_ray_results.png" alt="" data-position="center center" />
+									</a>
+								</section>
 							</section>
 
 					</div>
