@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Short Animation</title>
+		<title>Bump Mapping</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,8 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
 						<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
@@ -35,29 +36,49 @@
 							<li><a href="texture.html">Texture Mapping</a></li>
 							<li><a href="opengl_anim.html">OpenGL Animation</a></li>
 						</ul>
-						<!-- <ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul> -->
 					</nav>
 
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>Bump Mapping</h1>
+							</header>
+							<div class="content">
+								<p>Writing fragment shader for bump mapping<br /></p>
+							</div>
+						</div>
+					</section>
+
 				<!-- Main -->
-					<div id="main" class="alt">
+					<div id="main">
 
 						<!-- One -->
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Short Animation</h1>
+										<h2>About</h2>
 									</header>
-									<p>Short Animation done in Unreal Engine 5 and Blender.</p>
-
-									<span class="image main"><img src="images/anim/cats.png" alt="" /></span>
-									<span class="image main"><img src="images/anim/blender_view.png" alt="" /></span>
-									<span class="image main"><img src="images/anim/unreal.jpg" alt="" /></span>
-									<span class="image main"><img src="images/anim/cat_unreal.png" alt="" /></span>
-									<p>Work in Progress.</p>
+									<p>In this project the following points were implemented with OpenGL:</p>
+									<ul>
+										<li>Bump mapping for the tiles and hemispherical mirrors</li>
+                                        <li>Lighting with Phong illumination model</li>
+                                        <li>Normal mapping from texture map</li>
+									</ul>
 								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a class="image">
+										<img src="images/bump/bump_mapping.png" alt="" data-position="center center" />
+									</a>
+								</section>
 							</section>
 
 					</div>
