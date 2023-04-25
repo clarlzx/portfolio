@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Bump Mapping</title>
+		<title>Distribution Ray Tracing</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -44,16 +44,16 @@
 
 				<!-- Banner -->
 				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style6">
+					<section id="banner" class="style3">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic06.jpg" alt="" />
+								<img src="images/pic03.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Bump Mapping</h1>
+								<h1>Distribution Ray Tracing</h1>
 							</header>
 							<div class="content">
-								<p>Writing fragment shader for bump mapping<br /></p>
+								<p>Depth-of-field and soft shadows<br /></p>
 							</div>
 						</div>
 					</section>
@@ -69,34 +69,42 @@
 									</header>
 									<p>In this project the following points were implemented with OpenGL:</p>
 									<ul>
-										<li>Bump mapping for the tiles and hemispherical mirrors</li>
-                                        <li>Lighting with Phong illumination model</li>
-                                        <li>Normal mapping from texture map</li>
+										<li>Whitted Ray Tracing</li>
+										<li>Distribution Ray Tracing algorithm to produce depth-of-field effect, imge anti-aliasing and soft shadows</li>	
 									</ul>
-								</div>
-							</section>
+									<p>Depth-of-field effect:</p>
+								
+									<section id="two" class="spotlights">
+										<section>
+											<a class="image">
+												<img src="images/dist_ray/depth-of-field.png" alt="" data-position="center center" />
+											</a>
+										</section>
+									</section>
+									
+									<p></p>
+									<p>Soft shadow:</p>
 
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a class="image">
-										<img src="images/bump/bump_mapping.png" alt="" data-position="center center" />
-									</a>
-								</section>
-							</section>
+									<section id="three" class="spotlights">
+										<section>
+											<a class="image">
+												<img src="images/dist_ray/soft_shadow.png" alt="" data-position="center center" />
+											</a>
+										</section>
+									</section>
+							</div>
+				</div>
 
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
 					</div>
+				</footer>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="copyright">
-								<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

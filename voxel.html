@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Bump Mapping</title>
+		<title>Voxelization</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -44,16 +44,16 @@
 
 				<!-- Banner -->
 				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style6">
+					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic06.jpg" alt="" />
+								<img src="images/pic02.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Bump Mapping</h1>
+								<h1>Voxelization</h1>
 							</header>
 							<div class="content">
-								<p>Writing fragment shader for bump mapping<br /></p>
+								<p>3D Mesh to Voxels<br /></p>
 							</div>
 						</div>
 					</section>
@@ -69,34 +69,25 @@
 									</header>
 									<p>In this project the following points were implemented with OpenGL:</p>
 									<ul>
-										<li>Bump mapping for the tiles and hemispherical mirrors</li>
-                                        <li>Lighting with Phong illumination model</li>
-                                        <li>Normal mapping from texture map</li>
+										<li>OctTree</li>
+										<li>Computation of voxels by checking for intersection between faces and OctTree subregions</li>	
 									</ul>
-								</div>
-							</section>
+								
+									<span class="image main"><img src="images/voxel/trex_long.png" alt="" /></span>
+									<span class="image main"><img src="images/voxel/alucy_long.png" alt="" /></span>
+							</div>
+				</div>
 
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a class="image">
-										<img src="images/bump/bump_mapping.png" alt="" data-position="center center" />
-									</a>
-								</section>
-							</section>
-
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
 					</div>
+				</footer>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="copyright">
-								<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
