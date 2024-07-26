@@ -15,88 +15,112 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
-					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+			<!-- Header -->
+			<!-- Note: The "styleN" class below should match that of the banner element. -->
+			<header id="header" class="alt style0">
+				<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a id="home" href="index.html">* Home *</a></li>
+					<li class="project-type">Personal Projects</li>
+					<li><a href="pathtracer.html">Real-time Path tracer</a></li>
+					<li class="project-type">Student Projects</li>
+					<li><a href="radiosity.html">Radiosity</a></li>
+					<li><a href="voxel.html">Voxelization</a></li>
+					<li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
+					<li><a href="shadow_map.html">Shadow Mapping</a></li>
+					<li><a href="short_animation.html">Short Animation</a></li>
+					<li><a href="bump_map.html">Bump Mapping</a></li>
+				</ul>
+			</nav>
+
+			<!-- Banner -->
+			<!-- Note: The "styleN" class below should match that of the header element. -->
+			<section id="banner" class="style0">
+				<div class="inner">
+					<header class="major">
+						<h1>Voxelization</h1>
 					</header>
+					<div class="content">
+						<p>3D Mesh to Voxels<br /></p>
+					</div>
+				</div>
+			</section>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="radiosity.html">Radiosity</a></li>
-							<li><a href="voxel.html">Voxelization</a></li>
-							<li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
-							<li><a href="shadow_map.html">Projection Mapping</a></li>
-							<li><a href="short_animation.html">Short Animation</a></li>
-							<li><a href="bump_map.html">Bump Mapping</a></li>
-							<li><a href="whitted_ray.html">Whitted Ray Tracing</a></li>
-							<li><a href="texture.html">Texture Mapping</a></li>
-							<li><a href="opengl_anim.html">OpenGL Animation</a></li>
+			<!-- Main -->
+			<div id="main">
+			
+				<div class="inner">
+					<!-- Table of Contents -->
+					<section id="table-of-contents">
+						<header class="major">
+							<h4>Table of Contents</h4>
+						</header>
+						<li><a href="#about">About</a></li>
+						<li><a href="#install">Installation</a></li>
+					</section>
+			
+					<section id="about">
+						<header class="major">
+							<h4>About</h4>
+						</header>
+						<p>As part of the animation and modeling class, students learnt about the techniques employed for animation (i.e. keyframes, forward & inverse kinematics, etc.) and for modeling (i.e. mesh modification, reconstruction, etc.).
+						In this modeling assignment, we were tasked to design a programme with its own system for reading .obj and .stl models. The programme displays statistics to help the user analyse the model and to learn more about different modeling algorithms, I chose to implement voxelization too.
+						</p>	
+
+						<p style="margin: 0;">The programme does the following:</p>
+						<ul>
+							<li>Displays information like angle statistics and number of components</li>
+							<li>Shows boundary edges in red (edges shared by only exactly one triangle)</li>
+							<li>Computes voxels by checking for intersection between triangles and OctTree subregions, using Separating Axis Theorem</li>
 						</ul>
-					</nav>
-
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
-							<span class="image">
-								<img src="images/pic02.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1>Voxelization</h1>
-							</header>
-							<div class="content">
-								<p>3D Mesh to Voxels<br /></p>
-							</div>
-						</div>
+						
+						<p style="margin: 0;">A skull model with vertices and boundary edges drawn:</p>
+						<span class="image left"><img src="images/voxel/skull.png"></span>
+						<span class="image left"><img src="images/voxel/skull_bound.png"></span>
+					
+						<p style="margin: 0;">A T-rex model and voxels computed with OctTree of depth = 7:</p>
+						<span class="image left"><img src="images/voxel/trex.png"></span>
+						<span class="image left"><img src="images/voxel/trex_voxel.png"></span>
 					</section>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>About</h2>
-									</header>
-									<p>In this project the following points were implemented with OpenGL:</p>
-									<ul>
-										<li>OctTree</li>
-										<li>Computation of voxels by checking for intersection between faces and OctTree subregions</li>	
-									</ul>
-								
-									<span class="image main"><img src="images/voxel/trex_long.png" alt="" /></span>
-									<span class="image main"><img src="images/voxel/alucy_long.png" alt="" /></span>
-							</div>
+					<section id="install">
+						<header class="major">
+							<h4>Installation</h4>
+						</header>
+						<p>The code and instructions for installation are located on GitHub at <a
+								href="https://github.com/clarlzx/Voxel">https://github.com/clarlzx/Voxel</a>.</p>
+					</section>
 				</div>
+			</div>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<ul class="copyright">
-							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</footer>
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

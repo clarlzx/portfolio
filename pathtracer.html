@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Voxelization</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <!-- Note: The "styleN" class below should match that of the banner element. -->
+        <header id="header" class="alt style0">
+            <a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a id="home" href="index.html">* Home *</a></li>
+                <li class="project-type">Personal Projects</li>
+                <li><a href="pathtracer.html">Real-time Path tracer</a></li>
+                <li class="project-type">Student Projects</li>
+                <li><a href="radiosity.html">Radiosity</a></li>
+                <li><a href="voxel.html">Voxelization</a></li>
+                <li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
+                <li><a href="shadow_map.html">Shadow Mapping</a></li>
+                <li><a href="short_animation.html">Short Animation</a></li>
+                <li><a href="bump_map.html">Bump Mapping</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner -->
+        <!-- Note: The "styleN" class below should match that of the header element. -->
+        <section id="banner" class="style0">
+            <div class="inner">
+                <header class="major">
+                    <h1>Real-time Path Tracer</h1>
+                </header>
+                <div class="content">
+                    <p>Using Vulkan API to create a path tracer<br /></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Main -->
+        <div id="main">
+
+            <div class="inner">
+                <!-- Table of Contents -->
+                <section id="table-of-contents">
+                    <header class="major">
+                        <h4>Table of Contents</h4>
+                    </header>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#install">Installation</a></li>
+                    <li><a href="#ref">References</a></li>
+                </section>
+
+                <section id="about">
+                    <header class="major">
+                        <h4>About</h4>
+                    </header>
+                    <p>In an effort to learn Vulkan, I attempted to develop a path tracing application, which simulates global illumination by
+                    tracing rays from a camera. The rays are terminated if they hit nothing or a light source, otherwise they bounce off surfaces until reaching a specified depth,
+                    effectively mimicking real-world light transport.</p>
+
+                    <p style="margin: 0;">In this project the following features were implemented:</p>
+                    <ul>
+                        <li>Create window with <a href="https://www.glfw.org/">GLFW</a></li>
+                        <li>Load .obj model using <a href="https://github.com/tinyobjloader/tinyobjloader">tinyobjloader</a></li>
+                        <li>Anti-aliasing by offsetting the origin of rays cast within a pixel region</li>
+                        <li>Raygen, Closest Hit and Miss shaders</li>
+                        <li>At present, only diffuse and light emitting materials have been added (I plan to add more materials soon)</li>
+                    </ul>
+
+                    <p>I am using NVIDIA GeForce RTX 2050, for a 800 x 600 window it runs at ~70 FPS with 10 rays per pixel and a ray depth of 20.
+                    The application is also designed to stop ray tracing after 1000 frames for a static frame.</p>
+
+                    <p style="margin: 0;">This is the result for Cornell Box after 1000 frames:</p>
+                    <span class="image left"><img src="images/pathtracer/cornell.png" alt="" /></span>
+                </section>
+
+                <section id="install">
+                    <header class="major">
+                        <h4>Installation</h4>
+                    </header>
+                    <p>The code and instructions for installation are located on GitHub at <a href="https://github.com/clarlzx/PathTracer">https://github.com/clarlzx/PathTracer</a>.</p>
+                </section>
+
+                <section id="ref">
+                    <header class="major">
+                        <h4>References</h4>
+                    </header>
+                    <li><a href="https://vulkan-tutorial.com/">vulkan-tutorial.com</a></li>
+                    <li><a href="https://raytracing.github.io/">Ray Tracing in One Weekend</a></li>
+                    <li><a href="https://github.com/nvpro-samples/vk_raytracing_tutorial_KHR/tree/master">NVIDIA Vulkan Ray Tracing Tutorials</a></li>
+                    <li><a href="https://www.saschawillems.de/blog/2019/04/21/new-vulkan-example-on-raytracing-using-vk_nv_ray_tracing/">Sascha Willems</a></li>
+                </section>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -15,92 +15,147 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
-					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+				<header id="header" class="alt style0">
+					<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="radiosity.html">Radiosity</a></li>
-							<li><a href="voxel.html">Voxelization</a></li>
-							<li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
-							<li><a href="shadow_map.html">Projection Mapping</a></li>
-							<li><a href="short_animation.html">Short Animation</a></li>
-							<li><a href="bump_map.html">Bump Mapping</a></li>
-							<li><a href="whitted_ray.html">Whitted Ray Tracing</a></li>
-							<li><a href="texture.html">Texture Mapping</a></li>
-							<li><a href="opengl_anim.html">OpenGL Animation</a></li>
-						</ul>
-					</nav>
+				<nav id="menu">
+					<ul class="links">
+						<li><a id="home" href="index.html">* Home *</a></li>
+						<li class="project-type">Personal Projects</li>
+						<li><a href="pathtracer.html">Real-time Path tracer</a></li>
+						<li class="project-type">Student Projects</li>
+						<li><a href="radiosity.html">Radiosity</a></li>
+						<li><a href="voxel.html">Voxelization</a></li>
+						<li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
+						<li><a href="shadow_map.html">Shadow Mapping</a></li>
+						<li><a href="short_animation.html">Short Animation</a></li>
+						<li><a href="bump_map.html">Bump Mapping</a></li>
+					</ul>
+				</nav>
 
 				<!-- Banner -->
 				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style1">
-						<div class="inner">
-							<span class="image">
-								<img src="images/pic01.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1>Radiosity</h1>
-							</header>
-							<div class="content">
-								<p>Progressive Refinement Radiosity<br /></p>
-							</div>
+				<section id="banner" class="style0">
+					<div class="inner">
+						<header class="major">
+							<h1>Radiosity</h1>
+						</header>
+						<div class="content">
+							<p>Progressive Refinement Radiosity<br /></p>
 						</div>
-					</section>
+					</div>
+				</section>
 
 				<!-- Main -->
-					<div id="main">
+				<div id="main">
+				
+					<div class="inner">
+						<!-- Table of Contents -->
+						<section id="table-of-contents">
+							<header class="major">
+								<h4>Table of Contents</h4>
+							</header>
+							<li><a href="#about">About</a></li>
+							<li><a href="#install">Installation</a></li>
+							<li><a href="#credits">Credits</a></li>
+						</section>
+				
+						<section id="about">
+							<header class="major">
+								<h4>About</h4>
+							</header>
+							<p>Radiosity is a global illumination technique for diffuse surfaces. Since the result is view independent, once computed, it can be rendered for any view.</p>
+							<p style="margin-bottom: 0;">This technique requires the model to be first subdivided into shooter (left image) and gatherer (right image) quads/patches.
+							A shooter quad shoots light energy to all other quads, while a gatherer quad gathers light energy from all other quads. Gatherer quads can be the same size as shooter quads or smaller. </p>
+							<span class="image left" style="margin-bottom: 0;"><img src="images/radiosity/shoot.png" alt=""></span>
+							<span class="image left" style="margin-bottom: 0;"><img src="images/radiosity/gather.png" alt=""></span>
+							<p style="margin: 0;"></p>
+							<span class="image left"><img src="images/radiosity/shoot_diag.png" alt=""></span>
+							<span class="image left"><img src="images/radiosity/gather_diag.png" alt=""></span>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>About</h2>
-									</header>
-									<p>In this project the following points were implemented with OpenGL:</p>
-									<ul>
-										<li>Implement Hemicube algorithm to estimate form factors for Radiosity</li>
-										<li>Implement Progressive Refinement Radiosity Algorithm</li>	
-									</ul>
-									<p>The above are illustrated in the following 2 scenes:</p>
-								</div>
-							</section>
+
+							<p style="margin: 0;">Radiosity is then defined to be the light power leaving per unit area of the surface quad, and light power is the sum of
+							emitted and reflected energy of a surface quad. 
+							</p>
+							<span class="image fit" style="margin: 0;"><img style="width: 25%;"src="images/radiosity/formula.png" alt=""></span>
+							<p>, where <i class="math">B<sub>i</sub></i>&nbsp; is the radiosity of quad <i class="math">i</i>,  
+							<i class="math">E<sub>i</sub></i>&nbsp; is the emission of quad <i class="math">i</i>,
+							<i class="math">R<sub>i</sub></i>&nbsp; is the reflectivity of quad <i class="math">i</i>,
+							and <i class="math">F<sub>ij</sub></i>&nbsp; is the form factor from quad <i class="math">i</i> to quad <i class="math">j</i>.
+							Form factor <i class="math">F<sub>ij</sub></i>&nbsp; is defined to be (energy leaving quad <i class="math">i</i>&nbsp; that strikes <i class="math">j</i>&nbsp; directly) / (energy leaving surface <i class="math">i</i>&nbsp; in all directions in the hemispherical space surrounding <i class="math">i</i>)
+							, and it can be approximated by the Hemicube algorithm which uses the sum of delta form factors to find an approximation.</p>
 							
-							<span class="image main"><img src="images/radiosity/orig_long.png" alt="" /></span>
+							<p style="margin: 0;">The progressive refinement radiosity algorithm involves the following steps:</p>
+							<ol style="margin: 0;">
+								<li>Find shooter quad <i class="math">i</i>&nbsp; with the greatest unshot radiosity</li>
+								<li>Use the Hemicube algorithm to compute form factors from shooter quad <i class="math">i</i>&nbsp; to all other gatherer quads</li>
+								<li>Update the radiosity of each of the gatherer quads, and the unshot radiosity of each of the the shooter quads</li>
+								<li>If the new greatest unshot radiosity is below a threshold, stop the algorithm else go back to step 1</li>
+							</ol>
+							<p style="margin: 0;">Hence after each iteration, the scene will get gradually brighter. 
+								And after radiosity is computed, vertex radiosities are calculated from the quad radiosities to produce smoother results.</p>
+							<span class="image left" style="max-width: 23%; margin-right: 0.5em;"><img src="images/radiosity/5.png" alt=""></span>
+							<span class="image left" style="max-width: 23%; margin-right: 0.5em;"><img src="images/radiosity/50.png" alt=""></span>
+							<span class="image left" style="max-width: 23%; margin-right: 0.5em;"><img src="images/radiosity/250.png" alt=""></span>
+							<span class="image left" style="max-width: 23%; margin-right: 0;"><img src="images/radiosity/500.png" alt=""></span>
 
-							<span class="image main"><img src="images/radiosity/new_long.png" alt="" /></span>
+						</section>
+				
+						<section id="install">
+							<header class="major">
+								<h4>Installation</h4>
+							</header>
+							<p style="margin: 0;">There are 3 projects in this assignment:</p>
+							<ol>
+								<li><b>QuadsViewer</b>: Shows subdivision of input quads into smaller shooter quads and even-smaller gatherer quads</li>
+								<li><b>RadiositySolver</b>: Computes radiosity solution for the scene and vertex radiosities from quad radiosities</li>
+								<li><b>RadiosityViewer</b>: Shows scene output by <b>RadiositySolver</b></li>
+							</ol>
 
+							<p>Do note that this was a school assignment and part of the code was provided as a template by the course.</p>
+
+							<p>The code and instructions for installation are located on GitHub at <a
+									href="https://github.com/clarlzx/Radiosity">https://github.com/clarlzx/Radiosity</a>.</p>
+						</section>
+
+						<section id="credits">
+							<header class="major">
+								<h4>Credits</h4>
+							</header>
+							<p>NUS CS4247 Teaching Team</p>
+						</section>
+					</div>
+				
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<ul class="copyright">
-							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</footer>
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

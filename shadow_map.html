@@ -15,77 +15,114 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
-					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+			<!-- Header -->
+			<!-- Note: The "styleN" class below should match that of the banner element. -->
+			<header id="header" class="alt style0">
+				<a href="index.html" class="logo"><strong>Clarissa's</strong> <span>Portfolio</span></a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a id="home" href="index.html">* Home *</a></li>
+					<li class="project-type">Personal Projects</li>
+					<li><a href="pathtracer.html">Real-time Path tracer</a></li>
+					<li class="project-type">Student Projects</li>
+					<li><a href="radiosity.html">Radiosity</a></li>
+					<li><a href="voxel.html">Voxelization</a></li>
+					<li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
+					<li><a href="shadow_map.html">Shadow Mapping</a></li>
+					<li><a href="short_animation.html">Short Animation</a></li>
+					<li><a href="bump_map.html">Bump Mapping</a></li>
+				</ul>
+			</nav>
+
+
+			<!-- Banner -->
+			<!-- Note: The "styleN" class below should match that of the header element. -->
+			<section id="banner" class="style0">
+				<div class="inner">
+					<header class="major">
+						<h1>Shadow Mapping</h1>
 					</header>
+					<div class="content">
+						<p>Lighting a scene with image from a light projector<br /></p>
+					</div>
+				</div>
+			</section>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="radiosity.html">Radiosity</a></li>
-							<li><a href="voxel.html">Voxelization</a></li>
-							<li><a href="distribution_ray.html">Distribution Ray Tracing</a></li>
-							<li><a href="shadow_map.html">Projection Mapping</a></li>
-							<li><a href="short_animation.html">Short Animation</a></li>
-							<li><a href="bump_map.html">Bump Mapping</a></li>
-							<li><a href="whitted_ray.html">Whitted Ray Tracing</a></li>
-							<li><a href="texture.html">Texture Mapping</a></li>
-							<li><a href="opengl_anim.html">OpenGL Animation</a></li>
+			<!-- Main -->
+			<div id="main">
+			
+				<div class="inner">
+					<!-- Table of Contents -->
+					<section id="table-of-contents">
+						<header class="major">
+							<h4>Table of Contents</h4>
+						</header>
+						<li><a href="#about">About</a></li>
+						<li><a href="#install">Installation</a></li>
+						<li><a href="#credits">Credits</a></li>
+					</section>
+			
+					<section id="about">
+						<header class="major">
+							<h4>About</h4>
+						</header>
+						<p>The shadow mapping algorithm is a technique for generating real-time shadows. It starts by rendering the scene from the
+						perspective of the light source and saving the result in a depth buffer called the shadow map. When rendering the scene
+						from the camera's viewpoint, each fragment's depth value relative to the light is compared to the corresponding value in
+						the shadow map. If the fragment's depth is greater, it is determined to be in shadow.
+						</p>
+						<p style="margin: 0;">In this project the following points were implemented:</p>
+						<ul>
+							<li>Using shadow mapping, render the scene as if lit by an image projected from the light source. 
+								If a fragment is not in the shadow, it takes the color of the image texture.</li>
+							<li>Percentage-closer filtering (PCF) to smooth shadow boundaries.</li>
 						</ul>
-					</nav>
-
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style4">
-						<div class="inner">
-							<span class="image">
-								<img src="images/pic04.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1>Projection Mapping</h1>
-							</header>
-							<div class="content">
-								<p>Through Shadow Map Algorithm<br /></p>
-							</div>
-						</div>
+						
+						<p style="margin: 0;">Image to project: </p>
+						<span class="image left"><img src="images/shadow_map/proj_image.png" alt = ""></span>
+						<p style="margin: 0;">Shadow map (depth values when light source is set as viewpoint): </p>
+						<span class="image left"><img src="images/shadow_map/shadow_map.png" alt=""></span>
+						<p style="margin: 0;">Results: </p>
+						<span class="image left"><img src="images/shadow_map/pic1.png" alt=""></span>
+						<span class="image left"><img src="images/shadow_map/pic2.png" alt=""></span>
 					</section>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>About</h2>
-									</header>
-									<p>In this project the following points were implemented with OpenGL:</p>
-									<ul>
-										<li>Shadow Mapping to produce shadows</li>
-										<li>Shadow Mapping to render scene as if lit by image projected from a light projector</li>
-										<li>Percentage-closer filtering (PCF) to smooth shadow boundaries</li>	
-									</ul>
-								
-									<span class="image main"><img src="images/shadow_map/long.png" alt="" /></span>
-							</div>
+					<section id="install">
+						<header class="major">
+							<h4>Installation</h4>
+						</header>
+						<p>Do note that this was a school assignment and part of the code was provided as a template by the course.</p>
+					
+						<p>The code and instructions for installation are located on GitHub at <a
+								href="https://github.com/clarlzx/ShadowMapping">https://github.com/clarlzx/ShadowMapping</a>.</p>
+					</section>
+					
+					<section id="credits">
+						<header class="major">
+							<h4>Credits</h4>
+						</header>
+						<p>NUS CS4247 Teaching Team</p>
+					</section>
 				</div>
+			
+			</div>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<ul class="copyright">
-							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</footer>
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
 
 		</div>
 
